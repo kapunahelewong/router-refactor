@@ -1,13 +1,15 @@
 <!-- #docregion -->
-<h1 class="title">Angular Router</h1>
+<h1>Angular Router</h1>
 <nav>
   <a routerLink="/clearance-center" routerLinkActive="active">Clearance Center</a>
-  <a routerLink="/exclusive-items" routerLinkActive="active">Exclusive Items</a>
-  <a routerLink="/admin" routerLinkActive="active">Admin</a>
-  <a routerLink="/login" routerLinkActive="active">Login</a>
+  <a routerLink="/items" routerLinkActive="active">Items</a>
+  <!-- #docregion contact-link -->
   <a [routerLink]="[{ outlets: { popup: ['compose'] } }]">Contact</a>
+  <!-- #enddocregion contact-link -->
 </nav>
+<!-- #docregion outlets -->
 <div [@routeAnimation]="getAnimationData(routerOutlet)">
   <router-outlet #routerOutlet="outlet"></router-outlet>
 </div>
 <router-outlet name="popup"></router-outlet>
+<!-- #enddocregion outlets -->

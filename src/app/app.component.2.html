@@ -1,0 +1,9 @@
+<!-- #docregion -->
+<h1>Angular Router</h1>
+<nav>
+  <a routerLink="/clearance-center" routerLinkActive="active">Clearance Center</a>
+  <a routerLink="/items" routerLinkActive="active">Items</a>
+</nav>
+<div [@routeAnimation]="getAnimationData(routerOutlet)">
+  <router-outlet #routerOutlet="outlet"></router-outlet>
+</div>
